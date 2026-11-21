@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <title>GLOBAL SCAM RADAR // SYSTEM V15 WEB</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://unpkg.com" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- الشريط العلوي -->
+        <header class="header">
+            <div class="logo">
+                <span class="shield-icon">📡</span>
+                <div>
+                    <h1>GLOBAL SCAM RADAR</h1>
+                    <span class="version-tag">CYBER INTELLIGENCE // WEB & MOBILE EDITION</span>
+                </div>
+            </div>
+            <button id="btnTestSound" class="btn btn-secondary">🔊 اختبار الإنذار</button>
+        </header>
+
+        <div class="divider"></div>
+
+        <!-- الشبكة الرئيسية -->
+        <main class="main-grid">
+            <!-- اللوحة اليمنى: أدوات الفحص والتحليل -->
+            <section class="panel input-panel">
+                <h2>1. فحص المكالمة والرقم (Phone OSINT)</h2>
+                <input type="text" id="phoneInput" placeholder="رقم المتصل الدولي (مثال: +442079460958 أو +97444407777)">
+                
+
+                <div class="checkbox-grid">
+                    <label><input type="checkbox" id="cbOtp"> طلب كود تحقق (OTP)</label>
+                    <label><input type="checkbox" id="cbMoney"> طلب دفع رسوم أو بطاقة</label>
+                    <label><input type="checkbox" id="cbLink"> طلب فتح رابط أو AnyDesk</label>
+                    <label><input type="checkbox" id="cbThreat"> أسلوب تهديد أو استعجال</label>
+                    <label><input type="checkbox" id="cbData"> طلب بطاقة (QID) أو كلمة مرور</label>
+                </div>
+
+                <div class="btn-group">
+                    <button id="btnAnalyzePhone" class="btn btn-primary">📡 تحليل وتحديد الموقع</button>
+                    <button id="btnGoogle" class="btn btn-secondary">🔍 جوجل</button>
+                    <button id="btnWhatsapp" class="btn btn-secondary">💬 واتساب</button>
+                </div>
+
+                <div class="sub-divider"></div>
+
+                <h2>2. فاحص الروابط والسيرفرات (Deep URL)</h2>
+                <input type="text" id="urlInput" placeholder="ضع الرابط المشبوه هنا لفحص النطاق وموقع السيرفر">
+                <button id="btnScanUrl" class="btn btn-primary full-width">🌐 فحص الرابط وعرض السيرفر على الخريطة</button>
+
+                <div class="sub-divider"></div>
+
+                <h2>3. تحليل الرسائل النصية أو البريد الإلكتروني</h2>
+                <input type="text" id="smsEmailInput" placeholder="الصق نص رسالة SMS/واتساب أو بريد إلكتروني للفحص">
+                <div class="btn-group">
+                    <button id="btnScanSms" class="btn btn-secondary">📩 تحليل الرسالة</button>
+                    <button id="btnScanEmail" class="btn btn-secondary">📧 فحص البريد</button>
+                    <button id="btnReset" class="btn btn-secondary">🔄 تصفير</button>
+                </div>
+            </section>
+
+            <!-- اللوحة اليسرى: شريط الحالة، الخريطة الحقيقية، والتقرير -->
+            <section class="panel output-panel">
+                <div id="alertBanner" class="banner banner-clear">
+                    [ SYSTEM V15 READY ] جاهز لرصد المكالمات، الروابط، والرسائل على خريطة العالم...
+                </div>
+
+                <!-- حاوية الخريطة الحقيقية بالأبيض والأسود -->
+                <div class="map-wrapper">
+                    <div id="radarMap" class="map-box"></div>
+                    <button id="btnResetMap" class="map-reset-btn" title="العودة للدوحة">🎯 الدوحة</button>
+                </div>
+
+                <!-- صندوق التقرير الاستخباراتي -->
+                <textarea id="intelReport" readonly placeholder="التقرير الاستخباراتي والبيانات الجنائية ستظهر هنا..."></textarea>
+
+                <div class="btn-group end">
+                    <button id="btnCopyReport" class="btn btn-secondary">📋 نسخ صيغة البلاغ الرسمي (مطراش2)</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com"></script>
+        <script src="https://unpkg.com"></script>
+    <script src="audio.js"></script>
+    <script src="map.js"></script>
+    <script src="scanners.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
+</body>
+</html>
